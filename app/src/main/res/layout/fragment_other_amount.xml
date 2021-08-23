@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.pastelemlondres.model.OrderViewModel" />
+
+        <variable
+            name="otherAmountFragment"
+            type="com.example.pastelemlondres.OtherAmountFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/subtotal"
+        app:layout_constraintTop_toTopOf="@+id/subtotal"
+        tools:context=".OtherAmountFragment">
+
+        <TextView
+            android:id="@+id/frango_other_am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="45dp"
+            android:text="@string/frango"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/btn_frango"
+            android:layout_width="150sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="20dp"
+            android:onClick="@{() -> otherAmountFragment.addNumberOfFrango()}"
+            app:backGroundColor="@android:color/holo_orange_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frango_other_am"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/carne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/carne"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/frango_other_am" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/btn_carne"
+            android:layout_width="150sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="20dp"
+            app:backGroundColor="@android:color/holo_orange_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/carne"
+            app:layout_constraintTop_toBottomOf="@id/btn_frango" />
+
+        <TextView
+            android:id="@+id/pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/pizza"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/carne" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/btn_pizza"
+            android:layout_width="150sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="20dp"
+            app:backGroundColor="@android:color/holo_orange_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pizza"
+            app:layout_constraintTop_toBottomOf="@id/btn_carne" />
+
+        <TextView
+            android:id="@+id/queijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/queijo"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pizza" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/btn_queijo"
+            android:layout_width="150sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="20dp"
+            app:backGroundColor="@android:color/holo_orange_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/queijo"
+            app:layout_constraintTop_toBottomOf="@id/btn_pizza" />
+
+        <TextView
+            android:id="@+id/frango_com_queijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/frango_com_queijo"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/queijo" />
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/btn_frango_com_queijo"
+            android:layout_width="150sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:backGroundColor="@android:color/holo_orange_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/frango_com_queijo"
+            app:layout_constraintTop_toBottomOf="@id/btn_queijo" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/Widget.Cupcake.Divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/side_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frango_com_queijo" />
+
+        <TextView
+            android:id="@+id/subtotal"
+            style="@style/Widget.Cupcake.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/side_margin"
+            android:text="@{@string/subtotal_price(viewModel.price)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            tools:text="Subtotal $5.00" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/side_margin"
+            android:onClick="@{() -> otherAmountFragment.cancelOrder()}"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toStartOf="@id/next_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/next_button" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="270dp"
+            android:onClick="@{() -> otherAmountFragment.goToNextScreen()}"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

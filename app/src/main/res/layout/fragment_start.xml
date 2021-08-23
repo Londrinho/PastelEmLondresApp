@@ -67,6 +67,16 @@
                 android:minWidth="@dimen/order_cupcake_button_width"
                 android:onClick="@{() -> startFragment.orderPastel(6)}"
                 android:text="@string/seis_pasteis" />
+
+            <Button
+                android:id="@+id/order_other_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/order_cupcake_button_width"
+                android:onClick="@{() -> startFragment.orderOtherAmount()}"
+                android:text="@string/outra_quantidade" />
         </LinearLayout>
     </ScrollView>
 </layout>

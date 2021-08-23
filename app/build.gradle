@@ -18,7 +18,7 @@ android {
     }
 
     buildFeatures {
-        dataBinding true
+        dataBinding = true
     }
 
     buildTypes {
@@ -39,6 +39,8 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
     def nav_version = "2.3.1"
     def lifecycle_version = "2.2.0"
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -51,4 +53,5 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation 'com.google.android.material:material:1.2.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.cepheuen.elegant-number-button:lib:1.0.2'
 }
